@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "2dcfbd90-83dd-4624-a929-fc378943c707",
+		"name": "coordinate_conversion_service_unit_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://34.235.192.106:8080/ellipsoids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fcbb4674-c6ba-442c-82a9-90c7f2292c0b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"",
+							"",
+							"pm.test(\"Code is Present\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"code\");",
+							"});",
+							"",
+							"pm.test(\"Name is Present\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"name\");",
+							"});",
+							"var jsonData = pm.response.json();",
+							"console.log(jsonData.availableEllipsoids.length);",
+							"",
+							"pm.test(\"The records number should be \" +jsonData.availableEllipsoids.length , function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.availableEllipsoids.length).to.eql(25);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://34.235.192.106:8080/ellipsoids",
+					"protocol": "http",
+					"host": [
+						"34",
+						"235",
+						"192",
+						"106"
+					],
+					"port": "8080",
+					"path": [
+						"ellipsoids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://34.235.192.106:8080/coordinateTypes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5f069533-b228-4305-830f-f8674bcba70e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://34.235.192.106:8080/coordinateTypes",
+					"protocol": "http",
+					"host": [
+						"34",
+						"235",
+						"192",
+						"106"
+					],
+					"port": "8080",
+					"path": [
+						"coordinateTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://34.235.192.106:8080/datums ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "afb395da-82fe-4e12-9d23-0c1fcd6446e1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"",
+							"",
+							"pm.test(\"Code is Present\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"code\");",
+							"});",
+							"",
+							"pm.test(\"Name is Present\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"name\");",
+							"});",
+							"var jsonData = pm.response.json();",
+							"console.log(jsonData.availableDatums.length);",
+							"",
+							"pm.test(\"The records number should be \" +jsonData.availableDatums.length , function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.availableDatums.length).to.eql(253);",
+							"});",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://34.235.192.106:8080/datums",
+					"protocol": "http",
+					"host": [
+						"34",
+						"235",
+						"192",
+						"106"
+					],
+					"port": "8080",
+					"path": [
+						"datums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://34.235.192.106:8080/doTranslation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b5c80b6c-2462-426e-94bc-a339c882b3f3",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://34.235.192.106:8080/doTranslation",
+					"protocol": "http",
+					"host": [
+						"34",
+						"235",
+						"192",
+						"106"
+					],
+					"port": "8080",
+					"path": [
+						"doTranslation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
