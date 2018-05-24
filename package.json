@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "api-tests-coordinate-conversion-service: "newman run tests/coordinate_conversion_service_unit_test.postman_collection.json"
+    "api-tests-coordinate-conversion-service": "newman run tests/coordinate_conversion_service_unit_test.postman_collection.json"
   },
   "author": "Jian Wang",
   "dependencies": {
