@@ -175,8 +175,8 @@
 						"id": "b5c80b6c-2462-426e-94bc-a339c882b3f3",
 						"type": "text/javascript",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
 							"});",
 							"",
 							"pm.test(\"Content-Type is present\", function () {",
